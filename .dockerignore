@@ -1,0 +1,11 @@
+.venv
+venv
+telegram-bot-venv
+__pycache__
+*.pyc
+.pytest_cache
+.git
+.env
+*.session
+*.session-journal
+digest_state.json

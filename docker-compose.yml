@@ -1,0 +1,23 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    environment:
+      TELETHON_SESSION: /data/bot_session
+    volumes:
+      - telegram_data:/data
+    restart: unless-stopped
+    command: ["python", "bot.py"]
+
+  digest:
+    build: .
+    env_file: .env
+    environment:
+      TELETHON_SESSION: /data/digest_session
+    volumes:
+      - telegram_data:/data
+    restart: unless-stopped
+    command: ["./digest_loop.sh"]
+
+volumes:
+  telegram_data:

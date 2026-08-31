@@ -1,5 +1,4 @@
 beautifulsoup4
-google-genai
 httpx
 python-dotenv
 python-telegram-bot
